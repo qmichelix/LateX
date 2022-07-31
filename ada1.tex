@@ -1,0 +1,180 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage[dvipsnames]{xcolor}
+\pagestyle{fancy}
+\definecolor{chosengray}{gray}{0.8}
+\pagecolor{chosengray}
+
+\color{BlueViolet}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=PineGreen,    
+    urlcolor=Cerulean,
+    citecolor=Maroon,
+}
+\usepackage{sectsty}
+\sectionfont{\color{DarkOrchid}}
+\subsectionfont{\color{Orchid}}
+\subsubsectionfont{\color{Thistle}}
+
+\author{Rinsai Rossetti and Quentin Michelix}
+\title{\vspace{-2.0cm}\textbf{Lady Ada Lovelace}}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\listoffigures
+
+\listoftables
+
+\newpage
+
+\section{Summary}
+
+``The name Ada Lovelace (more formally, Augusta Ada King, Countess of Lovelace) is one that has become closely linked to early developments in computing" as seen in Table \ref{bern}. 
+
+This is due to her collaboration with the nineteenth-century polymath Charles Babbage on designs for his proposed ‘Analytical Engine’" an example of which is shown in Figure \ref{noteg}, ``which we now recognise as a steam-powered programmable computer." \cite{sciencefocus} \cite{sciencefocusadapted}
+
+\begin{wrapfigure}{R}{0.2\textwidth}
+\includegraphics[scale=0.2]{adaportrait_wired}
+\caption{Lady Lovelace's portrait}
+\end{wrapfigure}
+
+\section{Private life}
+
+\subsection{Early life}
+
+Lady Lovelace ``had been extensively tutored in mathematics throughout her childhood. Her mother, Annabella Milbanke, had decided that a solid grounding in mathematics would ward off the wild, romantic sensibility that possessed Lovelace’s father, Lord Byron, the famous poet." \cite{twobit}
+
+\subsubsection{Lord Byron}
+
+``Her father, Lord Byron (George Gordon Byron) was 27 years old, and had... achieved rock-star status in England for his poetry. Byron had a wild life — and became perhaps the top “bad boy” of the 19th century — with dark episodes in childhood, and lots of later romantic and other excesses. In addition to writing poetry and flouting the social norms of his time, he was often doing the unusual: keeping a tame bear in his college rooms in Cambridge, living it up with poets in Italy and “five peacocks on the grand staircase”, writing a grammar book of Armenian, and — had he not died too soon — leading troops in the Greek war of independence (as celebrated by a big statue in Athens), despite having no military training whatsoever." \cite{wired}
+
+Some of his works include:
+
+\begin{itemize}
+\item \href{https://www.biblio.com/childe-harolds-pilgrimage-by-byron-lord/work/15593}{Childe Harold's Pilgrimage}
+\item \href{https://www.biblio.com/don-juan-by-byron-lord/work/15592}{Don Juan}
+\item Short poems
+\begin{itemize}
+\item \href{https://www.poetryfoundation.org/poems/43822/and-thou-art-dead-as-young-and-fair}{And Thou art Dead, as Young and Fair}
+\item \href{https://englishhistory.net/byron/poems/careless-child/}{I Would I Were A Careless Child}
+\end{itemize}
+\end{itemize}
+
+\subsection{Adult life}
+
+``Ada Byron married William King in 1835. King later became the Earl of Lovelace, making Ada the Countess of Lovelace. Even after having three children, she continued her education in mathematics, employing Augustus de Morgan, who discovered De Morgan’s laws, as her tutor." \cite{twobit}
+
+\section{Work with Charles Babbage}
+
+\subsection{Charles Babbage}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lllllr}
+For & $x^{an}$ & \multicolumn{3}{c}{the operations would be} & 34 (x)\\
+\ldots & $a \cdot n \cdot x$ & \ldots & \ldots & \ldots & (x,x), or 2(x) \\
+\ldots & $\frac{a}{n} \cdot$ x & \ldots & \ldots & \ldots & ($\div$, x) \\
+\ldots & $a + n + x$ & \ldots & \ldots & \ldots & (+,+), or 2(+) \\
+\end{tabular}
+\caption{Lady Lovelace's table from Note B \cite{ada}}
+\label{noteg}
+\end{table}
+
+``Although Babbage's life and accomplishments encompassed far more that was important than the invention of his two calculating machines, the Difference and Analytical Engines, it is on them that new research has most been needed." \cite{collier}
+
+``The idea of an automatic calculating machine fist came to T Babbage about 1820... By early 1822 Babbage had constructed just such a machine as this and applied it to the tabulation of $ T =~+x + 41$ among other functions-the first thirty values being tabulated in two and a half minutes... Within a year or two, Babbage’s mind had moved a long way towards the much more complex and intellectually rewarding Analytical Engine." \cite{cbc}
+
+\subsection{The Analytical Engine}
+
+``Charles Babbage commenced work on the design of the Analytical Engine in 1834." \cite{bromley} ``The Analytical Engine was never built \footnote{although a trial version was created, as seen in Figure \ref{machine}}, but many aspects of its design were recorded in immaculate detail in Babbage’s drawings and mechanical notation. It was to be programmed by means of punched cards, similar to those used in the weaving looms designed by Joseph Marie Jacquard. Separate decks of cards made up what we would now call the program, and gave the starting values for the computations. A complex mechanism allowed the machine to repeat a deck of cards, so as to execute a loop. The hardware involved many new and intricate mechanisms and was conceived on a massive scale. The central processing unit, which Babbage called the Mill, would be fifteen feet (4.5m) tall; the memory, or Store, holding a hundred 50-digit numbers would be twenty feet (6m) long (Babbage even considered machines with ten times that capacity); and other components included a printer, card punch, and graph plotter. Babbage estimated it would take three minutes to multiply two 20-digit numbers. A machine of that size would indeed have required steam power." \cite{bodleian}
+
+\subsection{Bernoulli numbers}
+
+``We will terminate these Notes by following up in detail the steps through which the engine could compute the Numbers of Bernoulli, this being (in the form in which we shall deduce it) a rather complicated example of its powers. The simplest manner of computing these numbers would be from the direct expansion of the equation
+
+$$ \frac{x}{\epsilon^x - 1} = \frac{1}{1 + \frac{x}{2} + \frac{x^2}{2 \cdot 3}+\frac{x^3}{2 \cdot 3 \cdot 4} + \& c.} $$
+
+\noindent which is in fact a particular case of the development of" other equations which are shown in the annexe \ref{annexe}. \cite{ada}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{ll|rr}
+\hline
+N & $\tau$(N) & N & $\tau$(N)\\
+\hline
+1 & 1 & 6 & -6048 \\
+2 & -24 & 7 & -16744 \\
+3 & 252 & 8 & 84480 \\
+4 & -1472 & 9 & -113643 \\
+5 & 4830 & 10 & -115920 \\
+\hline
+\end{tabular}
+\caption{Example of Bernoulli numbers \cite{bernoulli}}
+\label{bern}
+\end{table}
+
+\subsection{Controversy}
+
+\subsubsection{Lady Lovelace's Contribution}
+
+\begin{figure}[h]
+\includegraphics[width=\textwidth]{noteg_sciencefocus}
+\caption{Note G}
+\end{figure}
+
+``Lovelace’s program is often called the world’s first computer program. Not everyone agrees that it should be called that. Lovelace’s legacy, it turns out, is one of computing history’s most hotly debated subjects... 
+
+Inevitably, the fact that Lovelace was a woman has made this dispute a charged one. Historians have cited all kinds of primary evidence to argue that the credit given to Lovelace is either appropriate or undeserved." \cite{twobit} 
+
+``In the two hundred years since her birth, opinions of Lovelace's ability have ranged from ‘genius’ to ‘charlatan’." \cite{earlymath}
+
+However, ``Lovelace’s paper is an extraordinary accomplishment, probably understood and recognised by very few in its time, yet still perfectly understandable nearly two centuries later. It covers algebra, mathematics, logic, and even philosophy; a presentation of the unchanging principles of the general-purpose computer; a comprehensive and detailed account of the so-called “first computer program”; and an overview of the practical engineering of data, cards, memory, and programming." \cite{bodleian}
+
+\subsubsection{Lady Lovelace's Objection}
+
+``The evidence available to Lady Lovelace did not encourage her to believe that" computers were capable of real intelligence \footnote{This has often been taken as her argument against AI}. \cite{turing} 
+
+Alan Turing, who disagreed, protested: ``A variant of Lady Lovelace's objection states that a machine can ``never do anything really new." This may be parried for a moment with the saw, ``There is nothing new under the sun." Who can be certain that ``original work" that he has done was not simply the growth of the seed planted in him by teaching, or the effect of following well-known general principles. A better variant of the objection says that a machine can never ``take us by surprise." 
+
+This statement is a more direct challenge and can be met directly. Machines take me by surprise with great frequency." \cite{turing}
+
+\begin{figure}[t]
+\centering
+\includegraphics[scale=0.2]{engine_bodleian}
+\caption{Trial model of the Analytical Engine}
+\label{machine}
+\end{figure}
+
+\subsection{Annexe} \label{annexe}
+
+\begin{equation}
+\frac{a + bx + cx^2 + \&c.}{a' + b'x + c'x^2 + \&c.}
+\end{equation}
+
+\begin{equation}
+B_{2n-1} = \frac{\pm2^n}{(2^{2n} - 1)} \left ( 
+\begin{array}{ccccl}
+& \multicolumn{4}{l}{\frac{1}{2}n^{2n-1}} \\
+- & \multicolumn{4}{l}{(n - 1)^{2n-1} \{1 + \frac{1}{2} \cdot \frac{2n}{1}\}} \\
++ & \multicolumn{4}{l}{(n - 2)^{2n-1} \{1 + \frac{2n}{1} + \frac{1}{2} \cdot \frac{2n\cdot(2n-1)}{1\cdot2}} \\
+- & \multicolumn{4}{l}{(n - 3)^{2n-1} \{1 + \frac{2n}{1} + \frac{2n\cdot(2n-1)}{1\cdot2} + \frac{1}{2} \cdot \frac{2n\cdot(2n-1)\cdot(2n-2)}{1\cdot2\cdot3}\}} \\
++ & \ldots & \ldots & \ldots & \ldots \\
+\end{array} 
+\right )
+\end{equation}
+
+\newpage
+\bibliographystyle{plain}
+\bibliography{adabibl}
+
+\end{document}

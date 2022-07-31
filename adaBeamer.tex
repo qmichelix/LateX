@@ -1,0 +1,218 @@
+\documentclass[12pt, xcolor=dvipsnames]{beamer}
+
+\usepackage[font=scriptsize,labelfont=it]{caption}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{framed}
+
+\newcommand\Fontvi{\fontsize{6}{7.2}\selectfont}
+
+
+\author{Rinsai Rossetti and Quentin Michelix}
+\usetheme{Hannover}
+
+\definecolor{grayish}{RGB}{200, 204, 206}
+\definecolor{purplish}{RGB}{78, 35, 94}
+\definecolor{lighterpurple}{RGB}{161, 96, 191}
+\setbeamercolor{title}{fg=lighterpurple}
+\setbeamercolor{normal text}{fg=DarkOrchid}
+\setbeamercolor{structure}{fg=purplish}
+\setbeamercolor{background canvas}{bg=grayish}
+\setbeamertemplate{footline}[frame number]
+\hypersetup{colorlinks=true}
+\titlegraphic{\includegraphics[scale=0.15]{laptop}}
+\title{\textbf{Lady Ada Lovelace}}
+\date{}
+
+
+\begin{document}
+
+
+
+\titlepage
+
+
+
+
+\begin{frame}
+
+\begin{leftbar}
+
+\tableofcontents
+
+\end{leftbar}
+
+\end{frame}
+
+\section{Summary}
+
+\begin{frame} 
+\begin{center} 
+{\bf \secname} 
+\end{center}
+
+\begin{wrapfigure}{L}{0.15\textwidth}
+\onslide<2->{\includegraphics[scale=0.06]{adaportrait_wired}}
+\onslide<3>{\caption{Lady Lovelace's portrait}}
+\end{wrapfigure}
+
+``The name Ada Lovelace (more formally, Augusta Ada King, Countess of Lovelace) is one that has become closely linked to early developments in computing" as seen on page \ref{bern}. 
+
+This is due to her collaboration with the nineteenth-century polymath Charles Babbage on designs for his proposed ‘Analytical Engine’" an example of which is shown in Figure \ref{noteg}, ``which we now recognise as a steam-powered programmable computer." \cite{sciencefocus} \cite{sciencefocusadapted}
+
+\end{frame}
+
+
+\section{Private life}
+
+\begin{frame}
+\begin{center} 
+{\bf \secname} 
+\end{center}
+
+Lady Lovelace ``had been extensively tutored in mathematics throughout her childhood. Her mother, Annabella Milbanke, had decided that a solid grounding in mathematics would ward off the wild, romantic sensibility that possessed Lovelace’s father, Lord Byron, the famous poet." \cite{twobit}
+
+Some of Lord Byron's works include: \pause
+
+\begin{itemize}
+\item \href{https://www.biblio.com/childe-harolds-pilgrimage-by-byron-lord/work/15593}{Childe Harold's Pilgrimage} \pause
+\item \href{https://www.biblio.com/don-juan-by-byron-lord/work/15592}{Don Juan} \pause
+\item \href{https://www.biblio.com/selected-poems-of-lord-byron-by-byron-lord/work/775652}{Selected poems}, a collection which contains: \pause
+\begin{itemize}
+\item \href{https://www.poetryfoundation.org/poems/43822/and-thou-art-dead-as-young-and-fair}{And Thou art Dead, as Young and Fair} \pause
+\item \href{https://englishhistory.net/byron/poems/careless-child/}{I Would I Were A Careless Child}
+\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\section{Work with Charles Babbage}
+
+\subsection{The Analytical Engine}
+
+\begin{frame}
+\begin{center} 
+{\bf \secname} 
+\end{center}
+
+``After several months of furious effort by both Babbage and Lovelace, the resulting paper was published in Taylor’s Scientific Memoirs in August 1843. It was signed only with her initials, A.A.L., and of its sixty-six pages, forty-one make up her appendices. 
+
+The paper is most famous for the final appendix, Note G." \cite{sciencefocus} \cite{sciencefocusadapted} 
+
+\pause
+
+\begin{figure}[h]
+\includegraphics[scale=0.2]{noteg_sciencefocus}
+\caption{Note G}
+\label{noteg}
+\end{figure}
+
+\end{frame}
+
+\subsection{Bernoulli Numbers}
+
+\begin{frame}
+\begin{center} 
+{\bf \subsecname} 
+\end{center}
+
+Lady Lovelace wrote: ``We will terminate these Notes by following up in detail the steps through which the engine could compute the Numbers of Bernoulli, this being (in the form in which we shall deduce it) a rather complicated example of its powers. The simplest manner of computing these numbers would be from the direct expansion of the equation \only<1>{about to be shown...}
+
+\only<2>{$$ \frac{x}{\epsilon^x - 1} = \frac{1}{1 + \frac{x}{2} + \frac{x^2}{2 \cdot 3}+\frac{x^3}{2 \cdot 3 \cdot 4} + \& c.} $$}
+
+\noindent which is in fact a particular case of the development of" other equations which are shown in the annexe on page \ref{annexe}. \cite{ada}
+
+\end{frame}
+
+\begin{frame}
+
+\begin{center} 
+{\bf \subsecname} \label{bern}
+\end{center}
+
+\alt<2>{
+\begin{table}[h]
+\centering
+\begin{tabular}{ll|rr}
+\hline
+N & $\tau$(N) & N & $\tau$(N)\\
+\hline
+1 & 1 & 6 & -6048 \\
+2 & -24 & 7 & -16744 \\
+3 & 252 & 8 & 84480 \\
+4 & -1472 & 9 & -113643 \\
+5 & 4830 & 10 & -115920 \\
+\hline
+\end{tabular}
+\caption{Example of Bernoulli numbers}
+\end{table}
+}
+{\footnotesize{
+\begin{table}[h]
+\centering
+\begin{tabular}{lllllr}
+For & $x^{an}$ & \multicolumn{3}{c}{the operations would be} & 34 (x)\\
+\ldots & $a \cdot n \cdot x$ & \ldots & \ldots & \ldots & (x,x), or 2(x) \\
+\ldots & $\frac{a}{n} \cdot$ x & \ldots & \ldots & \ldots & ($\div$, x) \\
+\ldots & $a + n + x$ & \ldots & \ldots & \ldots & (+,+), or 2(+) \\
+\end{tabular}
+\caption{Lady Lovelace's table from Note B \cite{ada}}
+\end{table}
+}}
+
+Note G ``demonstrates the operation of the machine by giving the example of the calculation of the so-called ‘Bernoulli numbers’, which crop up in many places in modern mathematics." \cite{sciencefocus} \cite{sciencefocusadapted}
+
+\end{frame}
+
+\section{Conclusion}
+
+\begin{frame}
+
+\begin{center} 
+{\bf \secname} 
+\end{center}
+
+``Lovelace’s paper is an extraordinary accomplishment, probably understood and recognised by very few in its time, yet still perfectly understandable nearly two centuries later.\pause It covers algebra, mathematics, logic, and even philosophy; a presentation of the unchanging principles of the general-purpose computer; a comprehensive and detailed account of the so-called “first computer program”; and an overview of the practical engineering of data, cards, memory, and programming." \cite{bodleian}
+
+\end{frame}
+
+\section{Annexe}
+
+\begin{frame}\label{annexe}
+
+\begin{center} 
+{\bf \secname} 
+\end{center}
+
+\Fontvi
+
+\begin{equation}
+\frac{a + bx + cx^2 + \&c.}{a' + b'x + c'x^2 + \&c.}
+\end{equation}
+
+\begin{equation}
+B_{2n-1} = \frac{\pm2^n}{(2^{2n} - 1)} \left ( 
+\begin{array}{ccccl}
+\onslide<2->{& \multicolumn{4}{l}{\frac{1}{2}n^{2n-1}} \\}
+\onslide<3->{- & \multicolumn{4}{l}{(n - 1)^{2n-1} \{1 + \frac{1}{2} \cdot \frac{2n}{1}\}} \\}
+\onslide<4->{+ & \multicolumn{4}{l}{(n - 2)^{2n-1} \{1 + \frac{2n}{1} + \frac{1}{2} \cdot \frac{2n\cdot(2n-1)}{1\cdot2}} \\}
+\onslide<5->{- & \multicolumn{4}{l}{(n - 3)^{2n-1} \{1 + \frac{2n}{1} + \frac{2n\cdot(2n-1)}{1\cdot2} + \frac{1}{2} \cdot \frac{2n\cdot(2n-1)\cdot(2n-2)}{1\cdot2\cdot3}\}} \\}
+\onslide<6->{+ & \ldots & \ldots & \ldots & \ldots \\}
+\end{array} 
+\right )
+\end{equation}
+
+\end{frame}
+
+\section{Bibliography}
+
+\begin{frame}
+
+\bibliographystyle{plain}
+\scriptsize{\bibliography{adabibl}}
+
+\end{frame}
+
+\end{document}
